@@ -7,16 +7,23 @@
 </head>
 <body>
     <script>
-        let a = {
-            Name : "Sameer kadyan",
-            language : "javaSacript"
+                let a = {
+            name : "Sameer",
+            language : "javaScript"
         }
-        console.log(a)
+        console.log(a);
 
         let p = {
-            run: alert("Hi, I am alert")
+            run: () => {
+                alert("Run!");
+            }
         }
-        p.run()
+        p.__proto__ = {
+            naam : "kadyan"
+        }
+        a.__proto__ = p;
+        a.run()
+        console.log(a.naam);
 
 
     </script>
